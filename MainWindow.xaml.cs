@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,13 @@ namespace Windows_11_Calendar_Replacement
             UpdateWindow();
         }
 
+        void DateButton_Click(Object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            button.Background = Brushes.Red;
+        }
+
 
 
         void UpdateWindow()
@@ -45,43 +53,57 @@ namespace Windows_11_Calendar_Replacement
             CurrentYearLabel.Content = currentYear;
 
             // Create a grid for the dates
+            Grid grid = new Grid();
             for (
                 int i = 0; i < 7; i++)
             {
                 ColumnDefinition col = new ColumnDefinition();
                 col.Width = new GridLength(1, GridUnitType.Star);
-                DatesGrid.ColumnDefinitions.Add(col);
+                grid.ColumnDefinitions.Add(col);
             }
             for (
                 int i = 0; i < 6; i++)
             {
                 RowDefinition row = new RowDefinition();
                 row.Height = new GridLength(1, GridUnitType.Star);
-                DatesGrid.RowDefinitions.Add(row);
+                grid.RowDefinitions.Add(row);
             }
 
             int x = 0;
 
             foreach (Day day in currentMonth.Days)
             {
-               
+
                 Button dateButton = new Button();
                 dateButton.Content = day.ToString();
+                dateButton.Click += DateButton_Click;
                 Grid.SetRow(dateButton, x / 7);
                 Grid.SetColumn(dateButton, x % 7);
-                DatesGrid.Children.Add(dateButton);
+                grid.Children.Add(dateButton);
                 x++;
             }
 
+            x = 0;
 
-            Grid grid = new Grid();
             grid.ShowGridLines = true;
 
+            DatesGrid.Children.Clear();
             DatesGrid.Children.Add(grid);
 
         }
 
+        private void NextMonth_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            calendar.NextMonth();
+            UpdateWindow();
+        }
 
-
+        private void PrevMonth_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            calendar.PrevMonth();
+            UpdateWindow();
+        }
     }
 }

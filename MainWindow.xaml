@@ -10,6 +10,8 @@
         <Label x:Name="CurrentYearLabel" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Height="24" Width="316" HorizontalContentAlignment="Center"/>
         <Grid x:Name="DatesGrid" Margin="0,39,0,0"/>
         <Label x:Name="CurrentMonthLabel" Content="Label" HorizontalAlignment="Center" Margin="0,13,0,0" VerticalAlignment="Top" Width="157" HorizontalContentAlignment="Center" />
+        <Button x:Name="NextMonth" Content="Next" HorizontalAlignment="Left" Margin="657,4,0,0" VerticalAlignment="Top" Height="20" Width="133" Click="NextMonth_Click"/>
+        <Button x:Name="PrevMonth" Content="Prev" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Height="20" Width="133" Click="PrevMonth_Click"/>
 
     </Grid>
 

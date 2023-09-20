@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,15 @@ namespace Windows_11_Calendar_Replacement
                 DayList.Add(new Day(i));
             }
             return DayList;
+            if (month == 12 )
+            {
+                Trace.WriteLine(DayList);
+            }
+        }
 
+        public int NumberOfDays()
+        {
+            return Days.Count();
         }
 
         public void AddEvent(Event e, int day)
