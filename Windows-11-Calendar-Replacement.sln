@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows-11-Calendar-Replacement", "Windows-11-Calendar-Replacement.csproj", "{FAB64847-7638-49A2-AA8E-123A91A2DB12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB64847-7638-49A2-AA8E-123A91A2DB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB64847-7638-49A2-AA8E-123A91A2DB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB64847-7638-49A2-AA8E-123A91A2DB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB64847-7638-49A2-AA8E-123A91A2DB12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {959A9304-4F25-4AAC-AE69-909DC8A929DC}
+	EndGlobalSection
+EndGlobal
